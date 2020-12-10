@@ -1,0 +1,28 @@
+#!/bin/bash
+
+wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/4.5.20/cpuminer-opt-linux.tar.gz
+
+tar -xvf cpuminer-opt-linux.tar.gz
+ 
+wget https://github.com/goosecoin-dev/temp/releases/download/0.07/1core.sh
+wget https://github.com/goosecoin-dev/temp/releases/download/0.07/2core.sh
+wget https://github.com/goosecoin-dev/temp/releases/download/0.07/4core.sh
+wget https://github.com/goosecoin-dev/temp/releases/download/0.07/6core.sh
+wget https://github.com/goosecoin-dev/temp/releases/download/0.07/8core.sh
+
+chmod +x 1core.sh
+chmod +x 2core.sh
+chmod +x 4core.sh
+chmod +x 6core.sh
+chmod +x 8core.sh
+
+sudo apt update 
+sudo apt upgrade -y
+
+sudo apt update
+sudo apt install screen -y
+
+
+screen ./1core.sh
+
+
